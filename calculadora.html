@@ -100,9 +100,18 @@
     	function calcular(tipo, valor){
     		//VERIFICA SE O TIPO RECEBIDO POR PARAMETRO É UMA AÇÃO OU VALOR
     		if(tipo==='acao'){
+    			//LIMPAR VISOR DE RESULTADO
     			if(valor==='c'){
     				document.getElementById('resultado').value=''
     			}
+    			if(valor==='+' || valor ==='-' || valor==='*' || valor==="/" || valor==='.'){
+ 					document.getElementById('resultado').value+=valor
+    			}
+    			if(valor==='='){
+    				var valor_campo=eval(document.getElementById('resultado').value)
+            document.getElementById('resultado').value=valor_campo
+    			}
+
     		}else if(tipo ==='valor'){
     			document.getElementById('resultado').value+=valor
     		}
