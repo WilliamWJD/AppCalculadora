@@ -100,10 +100,11 @@
     	function calcular(tipo, valor){
     		//VERIFICA SE O TIPO RECEBIDO POR PARAMETRO É UMA AÇÃO OU VALOR
     		if(tipo==='acao'){
-
+    			if(valor==='c'){
+    				document.getElementById('resultado').value=''
+    			}
     		}else if(tipo ==='valor'){
-    			var valor_campo=document.getElementById('resultado').value
-    			document.getElementById('resultado').value=valor_campo+valor
+    			document.getElementById('resultado').value+=valor
     		}
     	}
 
